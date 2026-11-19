@@ -1,5 +1,27 @@
-FROM nginx:alpine
-LABEL maintainer="elysalundyati@gmail.com"
-COPY index.html /usr/share/nginx/html/index.html
+# Tugas Docker Minggu 9
 
-EXPOSE 80
+## Identitas
+Nama: Elysa Lundyanti
+NIM: 202557201063
+Mata Kuliah: Teknologi Open Source
+
+## Deskripsi
+Proyek ini merupakan tugas kontainerisasi halaman profil
+menggunakan Docker dan Nginx.
+
+## Cara Build Image
+docker build -t profil-elysalundyanti:1.0 .
+
+## Cara Menjalankan Container
+docker run -d --name profil-elysalundyanti -p 8082:80 profil-elysalundyanti:1.0
+
+## Memeriksa Container
+docker ps
+
+## Membuka Halaman
+http://localhost:8082
+
+## File Proyek
+- Dockerfile
+- index.html
+- README.md
